@@ -28,12 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            tbxBreite = new TextBox();
+            lblBreite = new Label();
+            lblHoehe = new Label();
+            tbxHoehe = new TextBox();
+            SuspendLayout();
+            // 
+            // tbxBreite
+            // 
+            tbxBreite.Location = new Point(663, 32);
+            tbxBreite.Name = "tbxBreite";
+            tbxBreite.Size = new Size(125, 27);
+            tbxBreite.TabIndex = 0;
+            // 
+            // lblBreite
+            // 
+            lblBreite.AutoSize = true;
+            lblBreite.Location = new Point(663, 9);
+            lblBreite.Name = "lblBreite";
+            lblBreite.Size = new Size(51, 20);
+            lblBreite.TabIndex = 1;
+            lblBreite.Text = "Breite:";
+            // 
+            // lblHoehe
+            // 
+            lblHoehe.AutoSize = true;
+            lblHoehe.Location = new Point(664, 62);
+            lblHoehe.Name = "lblHoehe";
+            lblHoehe.Size = new Size(48, 20);
+            lblHoehe.TabIndex = 2;
+            lblHoehe.Text = "Höhe:";
+            // 
+            // tbxHoehe
+            // 
+            tbxHoehe.Location = new Point(663, 85);
+            tbxHoehe.Name = "tbxHoehe";
+            tbxHoehe.Size = new Size(125, 27);
+            tbxHoehe.TabIndex = 3;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(tbxHoehe);
+            Controls.Add(lblHoehe);
+            Controls.Add(lblBreite);
+            Controls.Add(tbxBreite);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox tbxBreite;
+        private Label lblBreite;
+        private Label lblHoehe;
+        private TextBox tbxHoehe;
     }
 }
