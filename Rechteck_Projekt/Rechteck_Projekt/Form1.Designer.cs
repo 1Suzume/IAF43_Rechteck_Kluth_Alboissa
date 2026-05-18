@@ -32,6 +32,7 @@
             lblBreite = new Label();
             lblHoehe = new Label();
             tbxHoehe = new TextBox();
+            btnBestaetigen = new Button();
             SuspendLayout();
             // 
             // tbxBreite
@@ -40,6 +41,7 @@
             tbxBreite.Name = "tbxBreite";
             tbxBreite.Size = new Size(125, 27);
             tbxBreite.TabIndex = 0;
+            tbxBreite.TextChanged += tbxBreite_TextChanged;
             // 
             // lblBreite
             // 
@@ -65,18 +67,31 @@
             tbxHoehe.Name = "tbxHoehe";
             tbxHoehe.Size = new Size(125, 27);
             tbxHoehe.TabIndex = 3;
+            tbxHoehe.TextChanged += tbxHoehe_TextChanged;
+            // 
+            // btnBestaetigen
+            // 
+            btnBestaetigen.Location = new Point(664, 378);
+            btnBestaetigen.Name = "btnBestaetigen";
+            btnBestaetigen.Size = new Size(124, 35);
+            btnBestaetigen.TabIndex = 4;
+            btnBestaetigen.Text = "Bestätigen";
+            btnBestaetigen.UseVisualStyleBackColor = true;
+            btnBestaetigen.Click += btnBestaetigen_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBestaetigen);
             Controls.Add(tbxHoehe);
             Controls.Add(lblHoehe);
             Controls.Add(lblBreite);
             Controls.Add(tbxBreite);
             Name = "Form1";
-            Text = "Form1";
+            Text = "frmRechteck";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -87,5 +102,6 @@
         private Label lblBreite;
         private Label lblHoehe;
         private TextBox tbxHoehe;
+        private Button btnBestaetigen;
     }
 }
