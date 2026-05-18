@@ -33,6 +33,9 @@
             lblHoehe = new Label();
             tbxHoehe = new TextBox();
             btnBestaetigen = new Button();
+            trbZoom = new TrackBar();
+            lblZoom = new Label();
+            ((System.ComponentModel.ISupportInitialize)trbZoom).BeginInit();
             SuspendLayout();
             // 
             // tbxBreite
@@ -79,11 +82,33 @@
             btnBestaetigen.UseVisualStyleBackColor = true;
             btnBestaetigen.Click += btnBestaetigen_Click;
             // 
+            // trbZoom
+            // 
+            trbZoom.AllowDrop = true;
+            trbZoom.Location = new Point(664, 291);
+            trbZoom.Minimum = -10;
+            trbZoom.Name = "trbZoom";
+            trbZoom.Size = new Size(130, 56);
+            trbZoom.TabIndex = 5;
+            trbZoom.Scroll += trbZoom_Scroll;
+            // 
+            // lblZoom
+            // 
+            lblZoom.AutoSize = true;
+            lblZoom.Location = new Point(677, 248);
+            lblZoom.Name = "lblZoom";
+            lblZoom.Size = new Size(75, 20);
+            lblZoom.TabIndex = 6;
+            lblZoom.Text = "Zoom = 0";
+            lblZoom.Click += lblZoom_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblZoom);
+            Controls.Add(trbZoom);
             Controls.Add(btnBestaetigen);
             Controls.Add(tbxHoehe);
             Controls.Add(lblHoehe);
@@ -92,6 +117,7 @@
             Name = "Form1";
             Text = "frmRechteck";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)trbZoom).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,5 +129,7 @@
         private Label lblHoehe;
         private TextBox tbxHoehe;
         private Button btnBestaetigen;
+        private TrackBar trbZoom;
+        private Label lblZoom;
     }
 }
