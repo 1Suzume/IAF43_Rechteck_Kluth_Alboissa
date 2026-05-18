@@ -17,8 +17,9 @@ namespace Rechteck_Projekt
                 if (value <= 0)
                 {
                     throw new ArgumentOutOfRangeException("Die Breite muss größer als 0 sein");
-                    breite = value;
+                    
                 }
+                breite = value;
             }
         }
         private double hoehe;
@@ -30,8 +31,9 @@ namespace Rechteck_Projekt
                 if (value <= 0)
                 {
                     throw new ArgumentOutOfRangeException("Die Höhe muss größer als 0 sein");
-                    hoehe = value;
+                    
                 }
+                hoehe = value;
             }
         }
     }
