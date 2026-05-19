@@ -74,7 +74,7 @@
             // 
             // btnBestaetigen
             // 
-            btnBestaetigen.Location = new Point(664, 378);
+            btnBestaetigen.Location = new Point(663, 140);
             btnBestaetigen.Name = "btnBestaetigen";
             btnBestaetigen.Size = new Size(124, 35);
             btnBestaetigen.TabIndex = 4;
@@ -85,7 +85,7 @@
             // trbZoom
             // 
             trbZoom.AllowDrop = true;
-            trbZoom.Location = new Point(664, 291);
+            trbZoom.Location = new Point(663, 238);
             trbZoom.Minimum = -10;
             trbZoom.Name = "trbZoom";
             trbZoom.Size = new Size(130, 56);
@@ -95,7 +95,7 @@
             // lblZoom
             // 
             lblZoom.AutoSize = true;
-            lblZoom.Location = new Point(677, 248);
+            lblZoom.Location = new Point(663, 188);
             lblZoom.Name = "lblZoom";
             lblZoom.Size = new Size(75, 20);
             lblZoom.TabIndex = 6;
