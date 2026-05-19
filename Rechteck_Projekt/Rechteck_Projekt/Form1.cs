@@ -30,6 +30,18 @@ namespace Rechteck_Projekt
             
             rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
             rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
+            if (tbxBreite.ReadOnly == true)
+            {
+                tbxBreite.ReadOnly = false;
+                tbxHoehe.ReadOnly = false;
+                btnBestaetigen.Text = "Bestätigen";
+            }
+            else
+            {
+                tbxBreite.ReadOnly= true;
+                tbxHoehe.ReadOnly= true;
+                btnBestaetigen.Text = "Abbrechen";
+            }
             
         }
 
