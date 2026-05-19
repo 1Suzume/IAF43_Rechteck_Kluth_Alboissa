@@ -28,25 +28,22 @@ namespace Rechteck_Projekt
         private void btnBestaetigen_Click(object sender, EventArgs e)
         {
             
-            //rechteck.Breite = Convert.ToDouble(tbxBreite.Text) * (Convert.ToDouble($"1,{trbZoom.Value}"));
-            //rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text) * (Convert.ToDouble($"1,{trbZoom.Value}"));
+            rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
+            rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
             
         }
 
         private void trbZoom_Scroll(object sender, EventArgs e)
         {
-            int count = 0;
-            if (count == 0)
-            {
-                rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
-                rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
-            }
+            
+            
+            
             
             lblZoom.Text = $"Zoom = {trbZoom.Value.ToString()}";
             zoomFaktor = 1 + (trbZoom.Value / 10.0);
-            tbxBreite.Text = Convert.ToString(Convert.ToDouble(tbxBreite.Text) * zoomFaktor);
-            tbxHoehe.Text = Convert.ToString(Convert.ToDouble(tbxHoehe.Text) * zoomFaktor);
-            count++;
+            tbxBreite.Text = Convert.ToString(rechteck.Breite * zoomFaktor);
+            tbxHoehe.Text = Convert.ToString(rechteck.Hoehe * zoomFaktor);
+            
         }
 
         private void lblZoom_Click(object sender, EventArgs e)
