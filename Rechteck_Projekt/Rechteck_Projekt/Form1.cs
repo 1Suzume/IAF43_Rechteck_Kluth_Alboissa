@@ -2,7 +2,8 @@ namespace Rechteck_Projekt
 {
     public partial class Form1 : Form
     {
-        
+        Rechteck rechteck = new Rechteck();
+        double zoomFaktor;
 
         public Form1()
         {
@@ -26,9 +27,24 @@ namespace Rechteck_Projekt
 
         private void btnBestaetigen_Click(object sender, EventArgs e)
         {
-            Rechteck rechteck = new Rechteck();
+            
             rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
             rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
+            
+        }
+
+        private void trbZoom_Scroll(object sender, EventArgs e)
+        {
+            lblZoom.Text = $"Zoom = {trbZoom.Value.ToString()}";
+            zoomFaktor = 1 + (trbZoom.Value / 10.0);
+            tbxBreite.Text = Convert.ToString(rechteck.Breite * zoomFaktor);
+            tbxHoehe.Text = Convert.ToString(rechteck.Hoehe * zoomFaktor);
+
+        }
+
+        private void lblZoom_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

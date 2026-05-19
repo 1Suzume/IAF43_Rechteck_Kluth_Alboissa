@@ -12,13 +12,14 @@ namespace Rechteck_Projekt
         public double Breite
         {
             get { return breite; }
-            set 
+            set
             {
                 if (value <= 0)
                 {
                     throw new ArgumentOutOfRangeException("Die Breite muss größer als 0 sein");
-                    breite = value;
+
                 }
+                breite = value;
             }
         }
         private double hoehe;
@@ -30,9 +31,39 @@ namespace Rechteck_Projekt
                 if (value <= 0)
                 {
                     throw new ArgumentOutOfRangeException("Die Höhe muss größer als 0 sein");
-                    hoehe = value;
+
                 }
+                hoehe = value;
             }
+        }
+
+        public double Umfang
+        {
+            get { return 2 * hoehe + 2 * breite; }
+        }
+
+
+
+        public double Diagonale
+        {
+            get { return Math.Sqrt(hoehe * hoehe + breite * breite); }
+        }
+        public double Flaeche
+        {
+            get { return hoehe * breite; }
+        }
+
+
+        // Drehen Methode:
+        public static void Drehen()
+        {
+            
+        }
+
+        // Zoomen Methode:
+        public static void zoom()
+        {
+
         }
     }
 }
