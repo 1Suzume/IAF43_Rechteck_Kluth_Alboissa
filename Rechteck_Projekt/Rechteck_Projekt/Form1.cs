@@ -28,8 +28,20 @@ namespace Rechteck_Projekt
         private void btnBestaetigen_Click(object sender, EventArgs e)
         {
             
-            rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
-            rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
+            
+            if (tbxBreite.ReadOnly == false) 
+            { 
+                tbxBreite.ReadOnly = true; 
+                tbxHoehe.ReadOnly = true;
+                rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
+                rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
+                btnBestaetigen.Text = "Abbrechen";
+            } else
+            {
+                tbxBreite.ReadOnly = false;
+                tbxHoehe.ReadOnly = false;
+                btnBestaetigen.Text = "Bestätigen";
+            }
             
         }
 
