@@ -29,20 +29,23 @@ namespace Rechteck_Projekt
         {
             
             
-            if (tbxBreite.ReadOnly == false) 
-            { 
-                tbxBreite.ReadOnly = true; 
-                tbxHoehe.ReadOnly = true;
+
+            if (tbxBreite.ReadOnly == true)
+            {
                 rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
                 rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
-                btnBestaetigen.Text = "Abbrechen";
-            } else
-            {
                 tbxBreite.ReadOnly = false;
                 tbxHoehe.ReadOnly = false;
                 btnBestaetigen.Text = "Bestätigen";
             }
-            
+            else
+            {
+                rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
+                rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
+                tbxBreite.ReadOnly= true;
+                tbxHoehe.ReadOnly= true;
+                btnBestaetigen.Text = "Abbrechen";
+            }
         }
 
         private void trbZoom_Scroll(object sender, EventArgs e)
