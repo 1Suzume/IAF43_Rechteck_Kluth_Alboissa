@@ -28,8 +28,7 @@ namespace Rechteck_Projekt
         private void btnBestaetigen_Click(object sender, EventArgs e)
         {
             
-            rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
-            rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
+            
             if (tbxBreite.ReadOnly == true)
             {
                 tbxBreite.ReadOnly = false;
@@ -38,6 +37,8 @@ namespace Rechteck_Projekt
             }
             else
             {
+                rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
+                rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
                 tbxBreite.ReadOnly= true;
                 tbxHoehe.ReadOnly= true;
                 btnBestaetigen.Text = "Abbrechen";
