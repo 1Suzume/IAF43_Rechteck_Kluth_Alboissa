@@ -12,12 +12,12 @@ namespace Rechteck_Projekt
 
         private void tbxBreite_TextChanged(object sender, EventArgs e)
         {
-
+            rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
         }
 
         private void tbxHoehe_TextChanged(object sender, EventArgs e)
         {
-
+            rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,11 +61,15 @@ namespace Rechteck_Projekt
         private void btnZoomMinus_Click(object sender, EventArgs e)
         {
             rechteck.zoom(true);
+            tbxBreite.Text = rechteck.Breite.ToString();
+            tbxHoehe.Text = rechteck.Hoehe.ToString();
         }
 
         private void btnZoomPlus_Click(object sender, EventArgs e)
         {
             rechteck.zoom(false);
+            tbxBreite.Text = rechteck.Breite.ToString();
+            tbxHoehe.Text = rechteck.Hoehe.ToString();
         }
     }
 }
