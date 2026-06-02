@@ -33,9 +33,8 @@
             lblHoehe = new Label();
             tbxHoehe = new TextBox();
             btnBestaetigen = new Button();
-            trbZoom = new TrackBar();
-            lblZoom = new Label();
-            ((System.ComponentModel.ISupportInitialize)trbZoom).BeginInit();
+            btnZoomPlus = new Button();
+            btnZoomMinus = new Button();
             SuspendLayout();
             // 
             // tbxBreite
@@ -82,33 +81,31 @@
             btnBestaetigen.UseVisualStyleBackColor = true;
             btnBestaetigen.Click += btnBestaetigen_Click;
             // 
-            // trbZoom
+            // btnZoomPlus
             // 
-            trbZoom.AllowDrop = true;
-            trbZoom.Location = new Point(663, 238);
-            trbZoom.Minimum = -10;
-            trbZoom.Name = "trbZoom";
-            trbZoom.Size = new Size(130, 56);
-            trbZoom.TabIndex = 5;
-            trbZoom.Scroll += trbZoom_Scroll;
+            btnZoomPlus.Location = new Point(690, 250);
+            btnZoomPlus.Name = "btnZoomPlus";
+            btnZoomPlus.Size = new Size(94, 29);
+            btnZoomPlus.TabIndex = 5;
+            btnZoomPlus.Text = "button1";
+            btnZoomPlus.UseVisualStyleBackColor = true;
             // 
-            // lblZoom
+            // btnZoomMinus
             // 
-            lblZoom.AutoSize = true;
-            lblZoom.Location = new Point(663, 188);
-            lblZoom.Name = "lblZoom";
-            lblZoom.Size = new Size(75, 20);
-            lblZoom.TabIndex = 6;
-            lblZoom.Text = "Zoom = 0";
-            lblZoom.Click += lblZoom_Click;
+            btnZoomMinus.Location = new Point(671, 341);
+            btnZoomMinus.Name = "btnZoomMinus";
+            btnZoomMinus.Size = new Size(94, 29);
+            btnZoomMinus.TabIndex = 6;
+            btnZoomMinus.Text = "button1";
+            btnZoomMinus.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(lblZoom);
-            Controls.Add(trbZoom);
+            Controls.Add(btnZoomMinus);
+            Controls.Add(btnZoomPlus);
             Controls.Add(btnBestaetigen);
             Controls.Add(tbxHoehe);
             Controls.Add(lblHoehe);
@@ -117,7 +114,6 @@
             Name = "Form1";
             Text = "frmRechteck";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)trbZoom).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -129,7 +125,7 @@
         private Label lblHoehe;
         private TextBox tbxHoehe;
         private Button btnBestaetigen;
-        private TrackBar trbZoom;
-        private Label lblZoom;
+        private Button btnZoomPlus;
+        private Button btnZoomMinus;
     }
 }
