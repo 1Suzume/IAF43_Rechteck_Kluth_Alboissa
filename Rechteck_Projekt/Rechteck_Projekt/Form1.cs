@@ -1,11 +1,11 @@
 namespace Rechteck_Projekt
 {
-    public partial class Form1 : Form
+    public partial class btnRechteck : Form
     {
         Rechteck rechteck = new Rechteck();
         double zoomFaktor;
 
-        public Form1()
+        public btnRechteck()
         {
             InitializeComponent();
         }
