@@ -53,15 +53,26 @@ namespace Rechteck_Projekt
 
 
         // Drehen Methode:
-        public static void Drehen()
+        public void Drehen()
         {
-            
+            double tmp = breite;
+            breite = hoehe;
+            hoehe = tmp;
         }
 
         // Zoomen Methode:
-        public static void zoom()
+        public void zoom(bool minus)
         {
-
+            if (!minus)
+            {
+                breite *= 1.1;
+                hoehe *= 1.1;
+            }
+            else
+            {
+                breite /= 1.1;
+                hoehe /= 1.1;
+            }
         }
     }
 }

@@ -89,6 +89,7 @@
             btnZoomPlus.TabIndex = 5;
             btnZoomPlus.Text = "button1";
             btnZoomPlus.UseVisualStyleBackColor = true;
+            btnZoomPlus.Click += btnZoomPlus_Click;
             // 
             // btnZoomMinus
             // 
@@ -98,6 +99,7 @@
             btnZoomMinus.TabIndex = 6;
             btnZoomMinus.Text = "button1";
             btnZoomMinus.UseVisualStyleBackColor = true;
+            btnZoomMinus.Click += btnZoomMinus_Click;
             // 
             // Form1
             // 

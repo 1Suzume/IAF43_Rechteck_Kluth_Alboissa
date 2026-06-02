@@ -27,8 +27,8 @@ namespace Rechteck_Projekt
 
         private void btnBestaetigen_Click(object sender, EventArgs e)
         {
-            
-            
+
+
 
             if (tbxBreite.ReadOnly == true)
             {
@@ -42,20 +42,30 @@ namespace Rechteck_Projekt
             {
                 rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
                 rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
-                tbxBreite.ReadOnly= true;
-                tbxHoehe.ReadOnly= true;
+                tbxBreite.ReadOnly = true;
+                tbxHoehe.ReadOnly = true;
                 btnBestaetigen.Text = "Abbrechen";
             }
         }
 
         private void trbZoom_Scroll(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lblZoom_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnZoomMinus_Click(object sender, EventArgs e)
+        {
+            rechteck.zoom(true);
+        }
+
+        private void btnZoomPlus_Click(object sender, EventArgs e)
+        {
+            rechteck.zoom(false);
         }
     }
 }
