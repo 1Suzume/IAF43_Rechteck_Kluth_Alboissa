@@ -30,15 +30,15 @@
         {
             btnRecheckt = new Button();
             btnZoomMinus = new Button();
-            label1 = new Label();
+            lblUmfang = new Label();
             btnZoomPlus = new Button();
-            label2 = new Label();
+            lblFlaecheninhalt = new Label();
             tbxHoehe = new TextBox();
-            textBox1 = new TextBox();
+            tbxUmfang = new TextBox();
             lblHoehe = new Label();
-            textBox2 = new TextBox();
+            tbxFlaecheninhalt = new TextBox();
             tbxBreite = new TextBox();
-            label3 = new Label();
+            lblZoom = new Label();
             lblBreite = new Label();
             btnDrehen = new Button();
             panel1 = new Panel();
@@ -56,7 +56,7 @@
             btnRecheckt.Name = "btnRecheckt";
             btnRecheckt.Size = new Size(254, 174);
             btnRecheckt.TabIndex = 7;
-            btnRecheckt.Text = "Recheck hier";
+            btnRecheckt.Text = "Rechteck hier";
             btnRecheckt.UseVisualStyleBackColor = true;
             // 
             // btnZoomMinus
@@ -69,14 +69,14 @@
             btnZoomMinus.UseVisualStyleBackColor = true;
             btnZoomMinus.Click += btnZoomMinus_Click;
             // 
-            // label1
+            // lblUmfang
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(21, 157);
-            label1.Name = "label1";
-            label1.Size = new Size(65, 20);
-            label1.TabIndex = 8;
-            label1.Text = "Umfang:";
+            lblUmfang.AutoSize = true;
+            lblUmfang.Location = new Point(21, 157);
+            lblUmfang.Name = "lblUmfang";
+            lblUmfang.Size = new Size(65, 20);
+            lblUmfang.TabIndex = 8;
+            lblUmfang.Text = "Umfang:";
             // 
             // btnZoomPlus
             // 
@@ -88,14 +88,14 @@
             btnZoomPlus.UseVisualStyleBackColor = true;
             btnZoomPlus.Click += btnZoomPlus_Click;
             // 
-            // label2
+            // lblFlaecheninhalt
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(20, 250);
-            label2.Name = "label2";
-            label2.Size = new Size(99, 20);
-            label2.TabIndex = 9;
-            label2.Text = "Flächeninhalt:";
+            lblFlaecheninhalt.AutoSize = true;
+            lblFlaecheninhalt.Location = new Point(20, 250);
+            lblFlaecheninhalt.Name = "lblFlaecheninhalt";
+            lblFlaecheninhalt.Size = new Size(99, 20);
+            lblFlaecheninhalt.TabIndex = 9;
+            lblFlaecheninhalt.Text = "Flächeninhalt:";
             // 
             // tbxHoehe
             // 
@@ -105,12 +105,12 @@
             tbxHoehe.TabIndex = 3;
             tbxHoehe.TextChanged += tbxHoehe_TextChanged;
             // 
-            // textBox1
+            // tbxUmfang
             // 
-            textBox1.Location = new Point(20, 191);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 10;
+            tbxUmfang.Location = new Point(20, 191);
+            tbxUmfang.Name = "tbxUmfang";
+            tbxUmfang.Size = new Size(125, 27);
+            tbxUmfang.TabIndex = 10;
             // 
             // lblHoehe
             // 
@@ -121,12 +121,12 @@
             lblHoehe.TabIndex = 2;
             lblHoehe.Text = "Höhe:";
             // 
-            // textBox2
+            // tbxFlaecheninhalt
             // 
-            textBox2.Location = new Point(20, 273);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 11;
+            tbxFlaecheninhalt.Location = new Point(20, 273);
+            tbxFlaecheninhalt.Name = "tbxFlaecheninhalt";
+            tbxFlaecheninhalt.Size = new Size(125, 27);
+            tbxFlaecheninhalt.TabIndex = 11;
             // 
             // tbxBreite
             // 
@@ -136,14 +136,14 @@
             tbxBreite.TabIndex = 0;
             tbxBreite.TextChanged += tbxBreite_TextChanged;
             // 
-            // label3
+            // lblZoom
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(21, 342);
-            label3.Name = "label3";
-            label3.Size = new Size(52, 20);
-            label3.TabIndex = 12;
-            label3.Text = "Zoom:";
+            lblZoom.AutoSize = true;
+            lblZoom.Location = new Point(21, 342);
+            lblZoom.Name = "lblZoom";
+            lblZoom.Size = new Size(52, 20);
+            lblZoom.TabIndex = 12;
+            lblZoom.Text = "Zoom:";
             // 
             // lblBreite
             // 
@@ -168,15 +168,15 @@
             panel1.BackColor = SystemColors.ScrollBar;
             panel1.Controls.Add(btnDrehen);
             panel1.Controls.Add(lblBreite);
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(lblZoom);
             panel1.Controls.Add(tbxBreite);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(tbxFlaecheninhalt);
             panel1.Controls.Add(lblHoehe);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(tbxUmfang);
             panel1.Controls.Add(tbxHoehe);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(lblFlaecheninhalt);
             panel1.Controls.Add(btnZoomPlus);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lblUmfang);
             panel1.Controls.Add(btnZoomMinus);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -221,17 +221,18 @@
         }
 
         #endregion
+
         private Button btnRecheckt;
         private Button btnZoomMinus;
-        private Label label1;
+        private Label lblUmfang;
         private Button btnZoomPlus;
-        private Label label2;
+        private Label lblFlaecheninhalt;
         private TextBox tbxHoehe;
-        private TextBox textBox1;
+        private TextBox tbxUmfang;
         private Label lblHoehe;
-        private TextBox textBox2;
+        private TextBox tbxFlaecheninhalt;
         private TextBox tbxBreite;
-        private Label label3;
+        private Label lblZoom;
         private Label lblBreite;
         private Button btnDrehen;
         private Panel panel1;
