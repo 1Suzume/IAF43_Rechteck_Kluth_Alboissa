@@ -31,12 +31,14 @@ namespace Rechteck_Projekt
             if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text))
             {
                 tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
+                tbxFlaecheninhalt.Text = Convert.ToString(rechteck.Flaeche);
             }
             else
             {
                 tbxUmfang.Text = "";
+                tbxFlaecheninhalt.Text = "";
             }
-                
+
         }
 
         private void tbxHoehe_TextChanged(object sender, EventArgs e)
@@ -45,10 +47,12 @@ namespace Rechteck_Projekt
             if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text))
             {
                 tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
+                tbxFlaecheninhalt.Text = Convert.ToString(rechteck.Flaeche);
             }
             else
             {
                 tbxUmfang.Text = "";
+                tbxFlaecheninhalt.Text = "";
             }
         }
 
@@ -104,5 +108,9 @@ namespace Rechteck_Projekt
 
         }
 
+        private void tbxFlaecheninhalt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
