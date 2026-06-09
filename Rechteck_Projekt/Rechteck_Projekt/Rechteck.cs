@@ -18,7 +18,7 @@ namespace Rechteck_Projekt
                 {
                     throw new ArgumentOutOfRangeException("Die Breite muss größer als 0 sein");
                 }
-                breite = value;
+                breite = Math.Round(value, 2);
             }
         }
         private double hoehe;
@@ -31,7 +31,7 @@ namespace Rechteck_Projekt
                 {
                     throw new ArgumentOutOfRangeException("Die Höhe muss größer als 0 sein");
                 }
-                hoehe = value;
+                hoehe = Math.Round(value, 2);
             }
         }
 
@@ -55,9 +55,9 @@ namespace Rechteck_Projekt
         // Drehen Methode:
         public void Drehen()
         {
-            double tmp = breite;
-            breite = hoehe;
-            hoehe = tmp;
+            double tmp = Breite;
+            Breite = Hoehe;
+            Hoehe = tmp;
         }
 
         // Zoomen Methode:
@@ -65,13 +65,13 @@ namespace Rechteck_Projekt
         {
             if (!minus)
             {
-                breite *= 1.1;
-                hoehe *= 1.1;
+                Breite *= 1.1;
+                Hoehe *= 1.1;
             }
             else
             {
-                breite /= 1.1;
-                hoehe /= 1.1;
+                Breite /= 1.1;
+                Hoehe /= 1.1;
             }
         }
     }
