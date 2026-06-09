@@ -35,12 +35,12 @@
             btnZoomPlus = new Button();
             btnZoomMinus = new Button();
             btnRecheckt = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            button1 = new Button();
+            lblUmfang = new Label();
+            lblFlaecheninhalt = new Label();
+            tbxUmfang = new TextBox();
+            tbxFlaecheninhalt = new TextBox();
+            lblZoom = new Label();
+            btnDrehen = new Button();
             SuspendLayout();
             // 
             // tbxBreite
@@ -106,67 +106,69 @@
             btnRecheckt.Text = "Recheck hier";
             btnRecheckt.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblUmfang
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(664, 152);
-            label1.Name = "label1";
-            label1.Size = new Size(65, 20);
-            label1.TabIndex = 8;
-            label1.Text = "Umfang:";
+            lblUmfang.AutoSize = true;
+            lblUmfang.Location = new Point(664, 152);
+            lblUmfang.Name = "lblUmfang";
+            lblUmfang.Size = new Size(65, 20);
+            lblUmfang.TabIndex = 8;
+            lblUmfang.Text = "Umfang:";
             // 
-            // label2
+            // lblFlaecheninhalt
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(663, 245);
-            label2.Name = "label2";
-            label2.Size = new Size(99, 20);
-            label2.TabIndex = 9;
-            label2.Text = "Flächeninhalt:";
+            lblFlaecheninhalt.AutoSize = true;
+            lblFlaecheninhalt.Location = new Point(663, 245);
+            lblFlaecheninhalt.Name = "lblFlaecheninhalt";
+            lblFlaecheninhalt.Size = new Size(99, 20);
+            lblFlaecheninhalt.TabIndex = 9;
+            lblFlaecheninhalt.Text = "Flächeninhalt:";
             // 
-            // textBox1
+            // tbxUmfang
             // 
-            textBox1.Location = new Point(663, 186);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 10;
+            tbxUmfang.Location = new Point(663, 186);
+            tbxUmfang.Name = "tbxUmfang";
+            tbxUmfang.Size = new Size(125, 27);
+            tbxUmfang.TabIndex = 10;
+            tbxUmfang.TextChanged += tbxUmfang_TextChanged;
             // 
-            // textBox2
+            // tbxFlaecheninhalt
             // 
-            textBox2.Location = new Point(663, 268);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 11;
+            tbxFlaecheninhalt.Location = new Point(663, 268);
+            tbxFlaecheninhalt.Name = "tbxFlaecheninhalt";
+            tbxFlaecheninhalt.Size = new Size(125, 27);
+            tbxFlaecheninhalt.TabIndex = 11;
             // 
-            // label3
+            // lblZoom
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(664, 337);
-            label3.Name = "label3";
-            label3.Size = new Size(52, 20);
-            label3.TabIndex = 12;
-            label3.Text = "Zoom:";
+            lblZoom.AutoSize = true;
+            lblZoom.Location = new Point(664, 337);
+            lblZoom.Name = "lblZoom";
+            lblZoom.Size = new Size(52, 20);
+            lblZoom.TabIndex = 12;
+            lblZoom.Text = "Zoom:";
             // 
-            // button1
+            // btnDrehen
             // 
-            button1.Location = new Point(664, 437);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 40);
-            button1.TabIndex = 14;
-            button1.Text = "Drehen";
-            button1.UseVisualStyleBackColor = true;
+            btnDrehen.Location = new Point(664, 437);
+            btnDrehen.Name = "btnDrehen";
+            btnDrehen.Size = new Size(124, 40);
+            btnDrehen.TabIndex = 14;
+            btnDrehen.Text = "Drehen";
+            btnDrehen.UseVisualStyleBackColor = true;
+            btnDrehen.Click += btnDrehen_Click;
             // 
             // btnRechteck
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1285, 738);
-            Controls.Add(button1);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(btnDrehen);
+            Controls.Add(lblZoom);
+            Controls.Add(tbxFlaecheninhalt);
+            Controls.Add(tbxUmfang);
+            Controls.Add(lblFlaecheninhalt);
+            Controls.Add(lblUmfang);
             Controls.Add(btnRecheckt);
             Controls.Add(btnZoomMinus);
             Controls.Add(btnZoomPlus);
@@ -190,11 +192,11 @@
         private Button btnZoomPlus;
         private Button btnZoomMinus;
         private Button btnRecheckt;
-        private Label label1;
-        private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label3;
-        private Button button1;
+        private Label lblUmfang;
+        private Label lblFlaecheninhalt;
+        private TextBox tbxUmfang;
+        private TextBox tbxFlaecheninhalt;
+        private Label lblZoom;
+        private Button btnDrehen;
     }
 }

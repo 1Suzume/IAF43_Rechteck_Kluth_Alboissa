@@ -10,14 +10,46 @@ namespace Rechteck_Projekt
             InitializeComponent();
         }
 
+        private void tbxIsEmpty(string tbx, bool isBreite)
+        {
+            if (!string.IsNullOrEmpty(tbx))
+            {
+                if (isBreite)
+                {
+                    rechteck.Breite = Convert.ToDouble(tbx);
+                }
+                else
+                {
+                    rechteck.Hoehe = Convert.ToDouble(tbx);
+                }
+            }
+        }
+
         private void tbxBreite_TextChanged(object sender, EventArgs e)
         {
-            rechteck.Breite = Convert.ToDouble(tbxBreite.Text);
+            tbxIsEmpty(tbxBreite.Text, true);
+            if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text))
+            {
+                tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
+            }
+            else
+            {
+                tbxUmfang.Text = "";
+            }
+                
         }
 
         private void tbxHoehe_TextChanged(object sender, EventArgs e)
         {
-            rechteck.Hoehe = Convert.ToDouble(tbxHoehe.Text);
+            tbxIsEmpty(tbxHoehe.Text, false);
+            if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text))
+            {
+                tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
+            }
+            else
+            {
+                tbxUmfang.Text = "";
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,7 +62,7 @@ namespace Rechteck_Projekt
 
 
 
-            
+
         }
 
         private void trbZoom_Scroll(object sender, EventArgs e)
@@ -56,5 +88,21 @@ namespace Rechteck_Projekt
             tbxBreite.Text = rechteck.Breite.ToString();
             tbxHoehe.Text = rechteck.Hoehe.ToString();
         }
+
+        private void btnDrehen_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text))
+            {
+                rechteck.Drehen();
+                tbxBreite.Text = Convert.ToString(rechteck.Breite);
+                tbxHoehe.Text = Convert.ToString(rechteck.Hoehe);
+            }
+        }
+
+        private void tbxUmfang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
