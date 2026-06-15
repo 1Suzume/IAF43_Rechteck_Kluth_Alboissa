@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnRechteck = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Second_Form));
+            btnRechteckV = new Button();
             SuspendLayout();
             // 
-            // btnRechteck
+            // btnRechteckV
             // 
-            btnRechteck.BackColor = SystemColors.HotTrack;
-            btnRechteck.ForeColor = SystemColors.HotTrack;
-            btnRechteck.Location = new Point(288, 156);
-            btnRechteck.Name = "btnRechteck";
-            btnRechteck.Size = new Size(209, 87);
-            btnRechteck.TabIndex = 0;
-            btnRechteck.Text = "Rechteck";
-            btnRechteck.UseVisualStyleBackColor = false;
+            btnRechteckV.BackColor = SystemColors.HotTrack;
+            btnRechteckV.ForeColor = SystemColors.HotTrack;
+            btnRechteckV.Location = new Point(288, 156);
+            btnRechteckV.Name = "btnRechteckV";
+            btnRechteckV.Size = new Size(209, 87);
+            btnRechteckV.TabIndex = 0;
+            btnRechteckV.Text = "Rechteck";
+            btnRechteckV.UseVisualStyleBackColor = false;
             // 
             // Second_Form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnRechteck);
+            Controls.Add(btnRechteckV);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Second_Form";
             Text = "Rechteck";
             ResumeLayout(false);
@@ -55,6 +57,6 @@
 
         #endregion
 
-        private Button btnRechteck;
+        public Button btnRechteckV;
     }
 }

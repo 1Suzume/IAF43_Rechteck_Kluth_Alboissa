@@ -33,7 +33,6 @@ namespace Rechteck_Projekt
                 this.Hide();
             }
         }
-        
 
     }
 }

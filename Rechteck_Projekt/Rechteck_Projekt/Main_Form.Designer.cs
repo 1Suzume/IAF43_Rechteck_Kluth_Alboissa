@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnRechteck));
             tbxBreite = new TextBox();
             lblBreite = new Label();
             lblHoehe = new Label();
@@ -187,7 +188,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(250, 633);
+            ClientSize = new Size(250, 567);
             Controls.Add(tbxDiagonale);
             Controls.Add(lblDiagonale);
             Controls.Add(btnVisual);
@@ -203,6 +204,7 @@
             Controls.Add(lblHoehe);
             Controls.Add(lblBreite);
             Controls.Add(tbxBreite);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "btnRechteck";
             Text = "Main";
             ResumeLayout(false);

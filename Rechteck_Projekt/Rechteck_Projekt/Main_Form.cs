@@ -46,6 +46,8 @@ namespace Rechteck_Projekt
                 tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
                 tbxFlaecheninhalt.Text = Convert.ToString(rechteck.Flaeche);
                 tbxDiagonale.Text = Convert.ToString(rechteck.Diagonale);
+                SecondForm.btnRechteckV.Width = Convert.ToInt32(Math.Round(rechteck.Breite * 10, 0));
+                SecondForm.btnRechteckV.Height = Convert.ToInt32(Math.Round(rechteck.Hoehe * 10, 0));
             }
             else
             {
@@ -64,6 +66,8 @@ namespace Rechteck_Projekt
                 tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
                 tbxFlaecheninhalt.Text = Convert.ToString(rechteck.Flaeche);
                 tbxDiagonale.Text = Convert.ToString(rechteck.Diagonale);
+                SecondForm.btnRechteckV.Height = Convert.ToInt32(Math.Round(rechteck.Hoehe * 10, 0));
+                SecondForm.btnRechteckV.Width = Convert.ToInt32(Math.Round(rechteck.Breite * 10, 0));
             }
             else
             {
