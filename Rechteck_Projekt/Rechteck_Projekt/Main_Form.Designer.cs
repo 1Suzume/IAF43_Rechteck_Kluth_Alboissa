@@ -121,6 +121,7 @@
             // 
             tbxUmfang.Location = new Point(12, 138);
             tbxUmfang.Name = "tbxUmfang";
+            tbxUmfang.ReadOnly = true;
             tbxUmfang.Size = new Size(125, 27);
             tbxUmfang.TabIndex = 10;
             tbxUmfang.TextChanged += tbxUmfang_TextChanged;
@@ -129,6 +130,7 @@
             // 
             tbxFlaecheninhalt.Location = new Point(12, 191);
             tbxFlaecheninhalt.Name = "tbxFlaecheninhalt";
+            tbxFlaecheninhalt.ReadOnly = true;
             tbxFlaecheninhalt.Size = new Size(125, 27);
             tbxFlaecheninhalt.TabIndex = 11;
             tbxFlaecheninhalt.TextChanged += tbxFlaecheninhalt_TextChanged;
@@ -176,6 +178,7 @@
             // 
             tbxDiagonale.Location = new Point(13, 244);
             tbxDiagonale.Name = "tbxDiagonale";
+            tbxDiagonale.ReadOnly = true;
             tbxDiagonale.Size = new Size(125, 27);
             tbxDiagonale.TabIndex = 17;
             // 

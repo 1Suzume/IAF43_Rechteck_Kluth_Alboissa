@@ -45,11 +45,13 @@ namespace Rechteck_Projekt
             {
                 tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
                 tbxFlaecheninhalt.Text = Convert.ToString(rechteck.Flaeche);
+                tbxDiagonale.Text = Convert.ToString(rechteck.Diagonale);
             }
             else
             {
                 tbxUmfang.Text = "";
                 tbxFlaecheninhalt.Text = "";
+                tbxDiagonale.Text = "";
             }
 
         }
@@ -61,11 +63,13 @@ namespace Rechteck_Projekt
             {
                 tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
                 tbxFlaecheninhalt.Text = Convert.ToString(rechteck.Flaeche);
+                tbxDiagonale.Text = Convert.ToString(rechteck.Diagonale);
             }
             else
             {
                 tbxUmfang.Text = "";
                 tbxFlaecheninhalt.Text = "";
+                tbxDiagonale.Text = "";
             }
         }
 

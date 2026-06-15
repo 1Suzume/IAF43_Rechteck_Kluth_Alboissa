@@ -37,18 +37,18 @@ namespace Rechteck_Projekt
 
         public double Umfang
         {
-            get { return 2 * hoehe + 2 * breite; }
+            get { return Math.Round(2 * hoehe + 2 * breite, 2); }
         }
 
 
 
         public double Diagonale
         {
-            get { return Math.Sqrt(hoehe * hoehe + breite * breite); }
+            get { return Math.Round(Math.Sqrt(hoehe * hoehe + breite * breite), 2); }
         }
         public double Flaeche
         {
-            get { return hoehe * breite; }
+            get { return Math.Round(hoehe * breite, 2); }
         }
 
 
