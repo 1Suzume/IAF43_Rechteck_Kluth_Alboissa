@@ -33,12 +33,14 @@
             // 
             // btnRechteck
             // 
+            btnRechteck.BackColor = SystemColors.HotTrack;
+            btnRechteck.ForeColor = SystemColors.HotTrack;
             btnRechteck.Location = new Point(288, 156);
             btnRechteck.Name = "btnRechteck";
             btnRechteck.Size = new Size(209, 87);
             btnRechteck.TabIndex = 0;
             btnRechteck.Text = "Rechteck";
-            btnRechteck.UseVisualStyleBackColor = true;
+            btnRechteck.UseVisualStyleBackColor = false;
             // 
             // Second_Form
             // 
@@ -47,7 +49,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnRechteck);
             Name = "Second_Form";
-            Text = "Second_Form";
+            Text = "Rechteck";
             ResumeLayout(false);
         }
 

@@ -41,6 +41,8 @@
             lblZoom = new Label();
             btnDrehen = new Button();
             btnVisual = new Button();
+            lblDiagonale = new Label();
+            tbxDiagonale = new TextBox();
             SuspendLayout();
             // 
             // tbxBreite
@@ -79,7 +81,7 @@
             // 
             // btnZoomPlus
             // 
-            btnZoomPlus.Location = new Point(13, 360);
+            btnZoomPlus.Location = new Point(13, 330);
             btnZoomPlus.Name = "btnZoomPlus";
             btnZoomPlus.Size = new Size(55, 47);
             btnZoomPlus.TabIndex = 5;
@@ -89,7 +91,7 @@
             // 
             // btnZoomMinus
             // 
-            btnZoomMinus.Location = new Point(82, 360);
+            btnZoomMinus.Location = new Point(74, 330);
             btnZoomMinus.Name = "btnZoomMinus";
             btnZoomMinus.Size = new Size(55, 47);
             btnZoomMinus.TabIndex = 6;
@@ -100,7 +102,7 @@
             // lblUmfang
             // 
             lblUmfang.AutoSize = true;
-            lblUmfang.Location = new Point(13, 152);
+            lblUmfang.Location = new Point(13, 115);
             lblUmfang.Name = "lblUmfang";
             lblUmfang.Size = new Size(65, 20);
             lblUmfang.TabIndex = 8;
@@ -109,7 +111,7 @@
             // lblFlaecheninhalt
             // 
             lblFlaecheninhalt.AutoSize = true;
-            lblFlaecheninhalt.Location = new Point(12, 245);
+            lblFlaecheninhalt.Location = new Point(12, 168);
             lblFlaecheninhalt.Name = "lblFlaecheninhalt";
             lblFlaecheninhalt.Size = new Size(99, 20);
             lblFlaecheninhalt.TabIndex = 9;
@@ -117,7 +119,7 @@
             // 
             // tbxUmfang
             // 
-            tbxUmfang.Location = new Point(12, 186);
+            tbxUmfang.Location = new Point(12, 138);
             tbxUmfang.Name = "tbxUmfang";
             tbxUmfang.Size = new Size(125, 27);
             tbxUmfang.TabIndex = 10;
@@ -125,7 +127,7 @@
             // 
             // tbxFlaecheninhalt
             // 
-            tbxFlaecheninhalt.Location = new Point(12, 268);
+            tbxFlaecheninhalt.Location = new Point(12, 191);
             tbxFlaecheninhalt.Name = "tbxFlaecheninhalt";
             tbxFlaecheninhalt.Size = new Size(125, 27);
             tbxFlaecheninhalt.TabIndex = 11;
@@ -134,7 +136,7 @@
             // lblZoom
             // 
             lblZoom.AutoSize = true;
-            lblZoom.Location = new Point(13, 337);
+            lblZoom.Location = new Point(12, 307);
             lblZoom.Name = "lblZoom";
             lblZoom.Size = new Size(52, 20);
             lblZoom.TabIndex = 12;
@@ -142,9 +144,9 @@
             // 
             // btnDrehen
             // 
-            btnDrehen.Location = new Point(13, 437);
+            btnDrehen.Location = new Point(13, 402);
             btnDrehen.Name = "btnDrehen";
-            btnDrehen.Size = new Size(124, 40);
+            btnDrehen.Size = new Size(116, 40);
             btnDrehen.TabIndex = 14;
             btnDrehen.Text = "Drehen";
             btnDrehen.UseVisualStyleBackColor = true;
@@ -152,19 +154,39 @@
             // 
             // btnVisual
             // 
-            btnVisual.Location = new Point(12, 493);
+            btnVisual.BackColor = SystemColors.MenuBar;
+            btnVisual.Location = new Point(12, 476);
             btnVisual.Name = "btnVisual";
             btnVisual.Size = new Size(203, 59);
             btnVisual.TabIndex = 15;
             btnVisual.Text = "Visualisierung";
-            btnVisual.UseVisualStyleBackColor = true;
+            btnVisual.UseVisualStyleBackColor = false;
             btnVisual.Click += btnVisual_Click;
+            // 
+            // lblDiagonale
+            // 
+            lblDiagonale.AutoSize = true;
+            lblDiagonale.Location = new Point(13, 221);
+            lblDiagonale.Name = "lblDiagonale";
+            lblDiagonale.Size = new Size(81, 20);
+            lblDiagonale.TabIndex = 16;
+            lblDiagonale.Text = "Diagonale:";
+            // 
+            // tbxDiagonale
+            // 
+            tbxDiagonale.Location = new Point(13, 244);
+            tbxDiagonale.Name = "tbxDiagonale";
+            tbxDiagonale.Size = new Size(125, 27);
+            tbxDiagonale.TabIndex = 17;
             // 
             // btnRechteck
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(250, 555);
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(250, 633);
+            Controls.Add(tbxDiagonale);
+            Controls.Add(lblDiagonale);
             Controls.Add(btnVisual);
             Controls.Add(btnDrehen);
             Controls.Add(lblZoom);
@@ -199,5 +221,7 @@
         private Label lblZoom;
         private Button btnDrehen;
         private Button btnVisual;
+        private Label lblDiagonale;
+        private TextBox tbxDiagonale;
     }
 }
