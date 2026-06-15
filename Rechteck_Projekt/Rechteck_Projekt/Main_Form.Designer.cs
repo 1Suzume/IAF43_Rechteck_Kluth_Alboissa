@@ -34,18 +34,18 @@
             tbxHoehe = new TextBox();
             btnZoomPlus = new Button();
             btnZoomMinus = new Button();
-            btnRecheckt = new Button();
             lblUmfang = new Label();
             lblFlaecheninhalt = new Label();
             tbxUmfang = new TextBox();
             tbxFlaecheninhalt = new TextBox();
             lblZoom = new Label();
             btnDrehen = new Button();
+            btnVisual = new Button();
             SuspendLayout();
             // 
             // tbxBreite
             // 
-            tbxBreite.Location = new Point(663, 32);
+            tbxBreite.Location = new Point(12, 32);
             tbxBreite.Name = "tbxBreite";
             tbxBreite.Size = new Size(125, 27);
             tbxBreite.TabIndex = 0;
@@ -54,7 +54,7 @@
             // lblBreite
             // 
             lblBreite.AutoSize = true;
-            lblBreite.Location = new Point(663, 9);
+            lblBreite.Location = new Point(12, 9);
             lblBreite.Name = "lblBreite";
             lblBreite.Size = new Size(51, 20);
             lblBreite.TabIndex = 1;
@@ -63,7 +63,7 @@
             // lblHoehe
             // 
             lblHoehe.AutoSize = true;
-            lblHoehe.Location = new Point(664, 62);
+            lblHoehe.Location = new Point(13, 62);
             lblHoehe.Name = "lblHoehe";
             lblHoehe.Size = new Size(48, 20);
             lblHoehe.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // tbxHoehe
             // 
-            tbxHoehe.Location = new Point(663, 85);
+            tbxHoehe.Location = new Point(12, 85);
             tbxHoehe.Name = "tbxHoehe";
             tbxHoehe.Size = new Size(125, 27);
             tbxHoehe.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // btnZoomPlus
             // 
-            btnZoomPlus.Location = new Point(664, 360);
+            btnZoomPlus.Location = new Point(13, 360);
             btnZoomPlus.Name = "btnZoomPlus";
             btnZoomPlus.Size = new Size(55, 47);
             btnZoomPlus.TabIndex = 5;
@@ -89,7 +89,7 @@
             // 
             // btnZoomMinus
             // 
-            btnZoomMinus.Location = new Point(733, 360);
+            btnZoomMinus.Location = new Point(82, 360);
             btnZoomMinus.Name = "btnZoomMinus";
             btnZoomMinus.Size = new Size(55, 47);
             btnZoomMinus.TabIndex = 6;
@@ -97,19 +97,10 @@
             btnZoomMinus.UseVisualStyleBackColor = true;
             btnZoomMinus.Click += btnZoomMinus_Click;
             // 
-            // btnRecheckt
-            // 
-            btnRecheckt.Location = new Point(119, 121);
-            btnRecheckt.Name = "btnRecheckt";
-            btnRecheckt.Size = new Size(254, 174);
-            btnRecheckt.TabIndex = 7;
-            btnRecheckt.Text = "Recheck hier";
-            btnRecheckt.UseVisualStyleBackColor = true;
-            // 
             // lblUmfang
             // 
             lblUmfang.AutoSize = true;
-            lblUmfang.Location = new Point(664, 152);
+            lblUmfang.Location = new Point(13, 152);
             lblUmfang.Name = "lblUmfang";
             lblUmfang.Size = new Size(65, 20);
             lblUmfang.TabIndex = 8;
@@ -118,7 +109,7 @@
             // lblFlaecheninhalt
             // 
             lblFlaecheninhalt.AutoSize = true;
-            lblFlaecheninhalt.Location = new Point(663, 245);
+            lblFlaecheninhalt.Location = new Point(12, 245);
             lblFlaecheninhalt.Name = "lblFlaecheninhalt";
             lblFlaecheninhalt.Size = new Size(99, 20);
             lblFlaecheninhalt.TabIndex = 9;
@@ -126,7 +117,7 @@
             // 
             // tbxUmfang
             // 
-            tbxUmfang.Location = new Point(663, 186);
+            tbxUmfang.Location = new Point(12, 186);
             tbxUmfang.Name = "tbxUmfang";
             tbxUmfang.Size = new Size(125, 27);
             tbxUmfang.TabIndex = 10;
@@ -134,7 +125,7 @@
             // 
             // tbxFlaecheninhalt
             // 
-            tbxFlaecheninhalt.Location = new Point(663, 268);
+            tbxFlaecheninhalt.Location = new Point(12, 268);
             tbxFlaecheninhalt.Name = "tbxFlaecheninhalt";
             tbxFlaecheninhalt.Size = new Size(125, 27);
             tbxFlaecheninhalt.TabIndex = 11;
@@ -143,7 +134,7 @@
             // lblZoom
             // 
             lblZoom.AutoSize = true;
-            lblZoom.Location = new Point(664, 337);
+            lblZoom.Location = new Point(13, 337);
             lblZoom.Name = "lblZoom";
             lblZoom.Size = new Size(52, 20);
             lblZoom.TabIndex = 12;
@@ -151,7 +142,7 @@
             // 
             // btnDrehen
             // 
-            btnDrehen.Location = new Point(664, 437);
+            btnDrehen.Location = new Point(13, 437);
             btnDrehen.Name = "btnDrehen";
             btnDrehen.Size = new Size(124, 40);
             btnDrehen.TabIndex = 14;
@@ -159,18 +150,28 @@
             btnDrehen.UseVisualStyleBackColor = true;
             btnDrehen.Click += btnDrehen_Click;
             // 
+            // btnVisual
+            // 
+            btnVisual.Location = new Point(12, 493);
+            btnVisual.Name = "btnVisual";
+            btnVisual.Size = new Size(203, 59);
+            btnVisual.TabIndex = 15;
+            btnVisual.Text = "Visualisierung";
+            btnVisual.UseVisualStyleBackColor = true;
+            btnVisual.Click += btnVisual_Click;
+            // 
             // btnRechteck
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1285, 738);
+            ClientSize = new Size(250, 555);
+            Controls.Add(btnVisual);
             Controls.Add(btnDrehen);
             Controls.Add(lblZoom);
             Controls.Add(tbxFlaecheninhalt);
             Controls.Add(tbxUmfang);
             Controls.Add(lblFlaecheninhalt);
             Controls.Add(lblUmfang);
-            Controls.Add(btnRecheckt);
             Controls.Add(btnZoomMinus);
             Controls.Add(btnZoomPlus);
             Controls.Add(tbxHoehe);
@@ -178,8 +179,7 @@
             Controls.Add(lblBreite);
             Controls.Add(tbxBreite);
             Name = "btnRechteck";
-            Text = "frmRechteck";
-            Load += Form1_Load;
+            Text = "Main";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -192,12 +192,12 @@
         private TextBox tbxHoehe;
         private Button btnZoomPlus;
         private Button btnZoomMinus;
-        private Button btnRecheckt;
         private Label lblUmfang;
         private Label lblFlaecheninhalt;
         private TextBox tbxUmfang;
         private TextBox tbxFlaecheninhalt;
         private Label lblZoom;
         private Button btnDrehen;
+        private Button btnVisual;
     }
 }

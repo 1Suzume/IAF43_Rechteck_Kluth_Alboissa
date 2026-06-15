@@ -2,12 +2,17 @@ namespace Rechteck_Projekt
 {
     public partial class btnRechteck : Form
     {
+        private Second_Form SecondForm;
+
         Rechteck rechteck = new Rechteck();
         double zoomFaktor;
 
+        bool VisOffen = false;
         public btnRechteck()
         {
             InitializeComponent();
+            SecondForm = new Second_Form();
+            SecondForm.Visible = false;
         }
 
         private void tbxIsEmpty(string tbx, bool isBreite)
@@ -56,10 +61,7 @@ namespace Rechteck_Projekt
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnBestaetigen_Click(object sender, EventArgs e)
         {
@@ -111,6 +113,12 @@ namespace Rechteck_Projekt
         private void tbxFlaecheninhalt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVisual_Click(object sender, EventArgs e)
+        {   
+           //SecondForm.Show();
+          SecondForm.Visible = !SecondForm.Visible; 
         }
     }
 }
