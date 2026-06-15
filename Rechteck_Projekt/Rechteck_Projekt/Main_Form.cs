@@ -17,17 +17,25 @@ namespace Rechteck_Projekt
 
         private void tbxIsEmpty(string tbx, bool isBreite)
         {
-            if (!string.IsNullOrEmpty(tbx))
+            try
             {
-                if (isBreite)
+                if (!string.IsNullOrEmpty(tbx))
                 {
-                    rechteck.Breite = Convert.ToDouble(tbx);
-                }
-                else
-                {
-                    rechteck.Hoehe = Convert.ToDouble(tbx);
+                    if (isBreite)
+                    {
+                        rechteck.Breite = Convert.ToDouble(tbx);
+                    }
+                    else
+                    {
+                        rechteck.Hoehe = Convert.ToDouble(tbx);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Eingabe muss eine Zahl sein!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void tbxBreite_TextChanged(object sender, EventArgs e)
@@ -83,16 +91,32 @@ namespace Rechteck_Projekt
 
         private void btnZoomMinus_Click(object sender, EventArgs e)
         {
-            rechteck.zoom(true);
-            tbxBreite.Text = rechteck.Breite.ToString();
-            tbxHoehe.Text = rechteck.Hoehe.ToString();
+            try
+            {
+                rechteck.zoom(true);
+                tbxBreite.Text = rechteck.Breite.ToString();
+                tbxHoehe.Text = rechteck.Hoehe.ToString();
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show(ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void btnZoomPlus_Click(object sender, EventArgs e)
         {
-            rechteck.zoom(false);
-            tbxBreite.Text = rechteck.Breite.ToString();
-            tbxHoehe.Text = rechteck.Hoehe.ToString();
+            try
+            {
+                rechteck.zoom(false);
+                tbxBreite.Text = rechteck.Breite.ToString();
+                tbxHoehe.Text = rechteck.Hoehe.ToString();
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show(ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnDrehen_Click(object sender, EventArgs e)
