@@ -125,7 +125,6 @@
             tbxUmfang.ReadOnly = true;
             tbxUmfang.Size = new Size(125, 27);
             tbxUmfang.TabIndex = 10;
-            tbxUmfang.TextChanged += tbxUmfang_TextChanged;
             // 
             // tbxFlaecheninhalt
             // 
@@ -134,7 +133,6 @@
             tbxFlaecheninhalt.ReadOnly = true;
             tbxFlaecheninhalt.Size = new Size(125, 27);
             tbxFlaecheninhalt.TabIndex = 11;
-            tbxFlaecheninhalt.TextChanged += tbxFlaecheninhalt_TextChanged;
             // 
             // lblZoom
             // 

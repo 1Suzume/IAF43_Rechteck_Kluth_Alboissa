@@ -5,9 +5,7 @@ namespace Rechteck_Projekt
         private Second_Form SecondForm;
 
         Rechteck rechteck = new Rechteck();
-        double zoomFaktor;
 
-        bool VisOffen = false;
         public btnRechteck()
         {
             InitializeComponent();
@@ -15,11 +13,12 @@ namespace Rechteck_Projekt
             SecondForm.Visible = false;
         }
 
+        // Überprüft, ob die Textbox leer ist wenn nicht, wird die Eingabe in die entsprechenden Eigenschaften des Rechtecks umgewandelt
         private void tbxIsEmpty(string tbx, bool isBreite)
         {
-            try
+            try //try catch block um sicherzustellen, dass die Eingabe eine Zahl ist
             {
-                if (!string.IsNullOrEmpty(tbx))
+                if (!string.IsNullOrEmpty(tbx)) //überprüft ob die Textbox leer ist
                 {
                     if (isBreite)
                     {
@@ -31,16 +30,18 @@ namespace Rechteck_Projekt
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) //fängt alle Ausnahmen ab, die bei der Umwandlung auftreten können
             {
                 MessageBox.Show("Eingabe muss eine Zahl sein!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
+        // Aktualisiert die Berechnungen und die Visualisierung des Rechtecks, wenn sich die Breite ändert
         private void tbxBreite_TextChanged(object sender, EventArgs e)
         {
             tbxIsEmpty(tbxBreite.Text, true);
+            //überprüft ob beide Textboxen nicht leer sind, bevor die Berechnungen durchgeführt werden
             if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text))
             {
                 tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
@@ -49,7 +50,7 @@ namespace Rechteck_Projekt
                 SecondForm.btnRechteckV.Width = Convert.ToInt32(Math.Round(rechteck.Breite * 10, 0));
                 SecondForm.btnRechteckV.Height = Convert.ToInt32(Math.Round(rechteck.Hoehe * 10, 0));
             }
-            else
+            else //wenn eine der Textboxen leer ist, werden die Berechnungen zurückgesetzt
             {
                 tbxUmfang.Text = "";
                 tbxFlaecheninhalt.Text = "";
@@ -58,9 +59,11 @@ namespace Rechteck_Projekt
 
         }
 
+        // Aktualisiert die Berechnungen und die Visualisierung des Rechtecks, wenn sich die Höhe ändert
         private void tbxHoehe_TextChanged(object sender, EventArgs e)
         {
             tbxIsEmpty(tbxHoehe.Text, false);
+            //überprüft ob beide Textboxen nicht leer sind, bevor die Berechnungen durchgeführt werden
             if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text))
             {
                 tbxUmfang.Text = Convert.ToString(rechteck.Umfang);
@@ -69,7 +72,7 @@ namespace Rechteck_Projekt
                 SecondForm.btnRechteckV.Height = Convert.ToInt32(Math.Round(rechteck.Hoehe * 10, 0));
                 SecondForm.btnRechteckV.Width = Convert.ToInt32(Math.Round(rechteck.Breite * 10, 0));
             }
-            else
+            else //wenn eine der Textboxen leer ist, werden die Berechnungen zurückgesetzt
             {
                 tbxUmfang.Text = "";
                 tbxFlaecheninhalt.Text = "";
@@ -77,29 +80,10 @@ namespace Rechteck_Projekt
             }
         }
 
-
-
-        private void btnBestaetigen_Click(object sender, EventArgs e)
-        {
-
-
-
-
-        }
-
-        private void trbZoom_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblZoom_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Zoomt das Rechteck, indem die Methode "zoom" aufgerufen wird, und aktualisiert die Textboxen mit den neuen Werten
         private void btnZoomMinus_Click(object sender, EventArgs e)
         {
-            try
+            try //try catch block um sicherzustellen, dass die Methode "zoom" keine Ausnahmen wirft, wenn die Werte zu klein werden
             {
                 rechteck.zoom(true);
                 tbxBreite.Text = rechteck.Breite.ToString();
@@ -112,9 +96,10 @@ namespace Rechteck_Projekt
             }
         }
 
+        // Zoomt das Rechteck, indem die Methode "zoom" aufgerufen wird, und aktualisiert die Textboxen mit den neuen Werten
         private void btnZoomPlus_Click(object sender, EventArgs e)
         {
-            try
+            try //try catch block um sicherzustellen, dass die Methode "zoom" keine Ausnahmen wirft, wenn die Werte zu groß werden
             {
                 rechteck.zoom(false);
                 tbxBreite.Text = rechteck.Breite.ToString();
@@ -127,9 +112,10 @@ namespace Rechteck_Projekt
 
         }
 
+        // Dreht das Rechteck, indem die Methode "Drehen" aufgerufen wird, und aktualisiert die Textboxen mit den neuen Werten
         private void btnDrehen_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text))
+            if (!string.IsNullOrEmpty(tbxBreite.Text) && !string.IsNullOrEmpty(tbxHoehe.Text)) //überprüft ob beide Textboxen nicht leer sind, bevor die Methode "Drehen" aufgerufen wird
             {
                 rechteck.Drehen();
                 tbxBreite.Text = Convert.ToString(rechteck.Breite);
@@ -137,16 +123,7 @@ namespace Rechteck_Projekt
             }
         }
 
-        private void tbxUmfang_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbxFlaecheninhalt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // Zeigt oder versteckt das zweite Fenster, wenn der Button "Visualisieren" geklickt wird
         private void btnVisual_Click(object sender, EventArgs e)
         {   
            //SecondForm.Show();
