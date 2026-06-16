@@ -36,7 +36,7 @@
             // 
             btnRechteckV.BackColor = SystemColors.HotTrack;
             btnRechteckV.ForeColor = SystemColors.HotTrack;
-            btnRechteckV.Location = new Point(288, 156);
+            btnRechteckV.Location = new Point(12, 12);
             btnRechteckV.Name = "btnRechteckV";
             btnRechteckV.Size = new Size(209, 87);
             btnRechteckV.TabIndex = 0;
