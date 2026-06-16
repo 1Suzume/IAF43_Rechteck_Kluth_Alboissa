@@ -25,6 +25,13 @@ namespace Rechteck_Projekt
             this.Hoehe = hoehe;
         }
 
+        // Konstruktor für ein Quadrat, der die Seitenlänge als Parameter entgegennimmt und die Werte für Breite und Höhe auf die gleiche Zahl setzt
+        public Rechteck(double seitenlaenge)
+        {
+            this.Breite = seitenlaenge;
+            this.Hoehe = seitenlaenge;
+        }
+
         // Eigenschaften für Breite und Höhe, die sicherstellen, dass die Werte größer als 0 sind und auf 2 Dezimalstellen gerundet werden
         public double Breite
         {
