@@ -2,6 +2,7 @@ namespace Rechteck_Projekt
 {
     public partial class btnRechteck : Form
     {
+        //Objekt der klasse secondform erstellen um auch zugriff dadrauf zu kriegen
         private Second_Form SecondForm;
 
         Rechteck rechteck = new Rechteck();
@@ -9,7 +10,9 @@ namespace Rechteck_Projekt
         public btnRechteck()
         {
             InitializeComponent();
+
             SecondForm = new Second_Form();
+            //Die Sicht von zweiten form wird als false eingesetzt damit man sie mit einem button kontrollieren kann
             SecondForm.Visible = false;
         }
 
@@ -126,7 +129,7 @@ namespace Rechteck_Projekt
         // Zeigt oder versteckt das zweite Fenster, wenn der Button "Visualisieren" geklickt wird
         private void btnVisual_Click(object sender, EventArgs e)
         {   
-           //SecondForm.Show();
+           //Der Zustand vom Secondform wird invertiert, damit es durch klicken entweder erscehint oder versteckt wird
           SecondForm.Visible = !SecondForm.Visible; 
         }
     }
