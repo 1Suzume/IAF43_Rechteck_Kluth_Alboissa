@@ -49,6 +49,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = SystemColors.GrayText;
             ClientSize = new Size(800, 450);
             Controls.Add(btnRechteckV);
             Icon = (Icon)resources.GetObject("$this.Icon");

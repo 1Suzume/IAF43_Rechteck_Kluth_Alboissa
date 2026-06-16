@@ -186,7 +186,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(250, 567);
+            ClientSize = new Size(282, 567);
             Controls.Add(tbxDiagonale);
             Controls.Add(lblDiagonale);
             Controls.Add(btnVisual);
@@ -204,7 +204,7 @@
             Controls.Add(tbxBreite);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "btnRechteck";
-            Text = "Main";
+            Text = "Rechteck Ersteller";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -12,17 +12,19 @@ namespace Rechteck_Projekt
 {
     public partial class Second_Form : Form
     {
+        //ein objekt der klasse MainForm erstellen, damit man in secondFrom auch zugriff drauf kriegt
         private btnRechteck MainForm;
         public Second_Form()
         {
             InitializeComponent();
-            //this.MainForm = MainForm;
+           
         }
 
 
         //wenn der benutzer das fenster schließt, soll stattdessen das fenster 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
+
             base.OnFormClosing(e);
 
             //falls der schließen grund von user kommt
